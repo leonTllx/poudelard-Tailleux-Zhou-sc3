@@ -1,6 +1,17 @@
-from poudelard.univers import personnage
-from poudelard.utils.input_utils import demander_texte
-from poudelard.utils.input_utils import demander_nombre
+import os
+from poudelard.utils.input_utils import demander_texte, demander_nombre, load_fichier
+from poudelard.univers.personnage import (initialisation_personnage, afficher_personnage, modifier_argent, ajouter_objet)
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.join(BASE_DIR, 'data')
+
+def introduction():
+    print("\n=== Chapitre 1 - L'arrivée dans le monde magique ===\n")
+    print("Bienvenue ! Une grande aventure s'apprête à commencer...")
+    input("Appuyez sur Entrée pour continuer...")
+
+def creer_personnage():
+
 
 def introduction():
     print("*********************************************************")
@@ -47,8 +58,8 @@ print("\n*********************************************************")
 print("                    Profil du personnage                   ")
 print("*********************************************************\n")
 print(f"Nom : {personnage['Nom']}")
-print(f"Prenom : {personnage['prenom']}")
-print(f"Argent : {personnage['argent']}")
+print(f"Prenom : {personnage['Prenom']}")
+print(f"Argent : {personnage['Argent']}")
 print(f"Inventaire : ", ", ".join(personnage{'inventaire'}) if personnage['inventaire'] else: "Aucun")
 print(f"Sortilèges : ", ", ".join(personnage['sortileges']) if personnage['sortileges'] else: "Aucun")
 print("Attributs :")
