@@ -12,3 +12,13 @@ def afficher_maison_gagnante(maison):
         return
     max_score = None
     gagnantes = []
+    for m, s in maisons.items():
+        if max_score is None or s > max_score:
+            max_score = s
+            gagnantes = [m]
+        elif s== max_score:
+            gagnantes.append(m)
+    if len(gagnantes) == 1:
+        print(f"{Maison en tête : {gagnantes[0]} avec {max_score} points}")
+    else:
+        print(f"Maisons en ex aequo : {'.'} ")
