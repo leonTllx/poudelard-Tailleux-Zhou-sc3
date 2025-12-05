@@ -1,4 +1,4 @@
-def initialisation_personnage(nom: str,prenom: str, attributs: dict) -> dict:
+def initialisation_personnage(nom ,prenom ,attributs):
     joueur = {
         "Nom":nom,
         "Prenom":prenom,
