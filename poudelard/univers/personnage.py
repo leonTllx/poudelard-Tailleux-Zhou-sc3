@@ -1,17 +1,17 @@
-def stats_joueur(nom, prenom):
-    nom = input(nom)
-    prenom = input(prenom)
-    print(prenom)
-    print(nom)
+def initialisation_personnage(nom: str,prenom: str, attributs: dict) -> dict:
+    joueur = {
+        "Nom":nom,
+        "Prenom":prenom,
+        "Argent":100,
+        "Inventaires":[],
+        "Sortilèges":[],
+        "Attributs":dict(attributs),
+        "Maison":None,
+        "scoreMaison":0
+    }
+    return joueur
 
-Stats_joueur = {
-    "Nom":nom,
-    "Prenom":prenom,
-    "Argent":100,
-    "Inventaire":(),
-    "Sortilèges":(),
-    "Attributs":attributs
-}
-
-
-
+def afficher_personnage(joueur: dict) -> None:
+    print("Profil de personnage :")
+    for cle in joueur:
+        val = joueur[cle]
