@@ -3,7 +3,7 @@ def stats_joueur(nom, prenom):
     prenom = input(prenom)
     print(prenom)
     print(nom)
-"""
+
 Stats_joueur = {
     "Nom":nom,
     "Prenom":prenom,
@@ -11,9 +11,7 @@ Stats_joueur = {
     "Inventaire":(),
     "Sortilèges":(),
     "Attributs":attributs
-}"""
+}
 
-print("Stats_joueur")
-print("Stats_joueur")
 
 
