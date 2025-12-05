@@ -33,17 +33,21 @@ def repartition_maison(joueur, questions):
     scores["Serpentard"] += ambition*2
     scores["Poufsouffle"] += loyaute*2
     scores["Serdaigle"] += intelligence*2
+
     from utils.input_utils import demander_choix
+
     for (texte, options, maisons_assoc) in questions:
         choix = demander_choix(texte, options)
         idx = options.index(choix)
         maison = maisons_assoc[idx]
         scores[maison] += 3
     print("Résumé des scores :")
+
     for m, s in scores.items():
         print(f"{m} : {s} points")
     maison_finale = None
     max_score = None
+
     for m, s in scores.items():
         if max_score is None or s > max_score:
             max_score = s
