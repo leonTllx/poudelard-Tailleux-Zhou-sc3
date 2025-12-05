@@ -23,4 +23,17 @@ def is_int_string(s):
     return True
 
 def to_int(s):
-    s =
+    """en gros  ca convertit une chaine en entier en utilisant ord(), supp si t'as compris"""
+    s = s.strip()
+    neg = False
+    if s[0] == '-':
+        neg = True
+        s = s[1:]
+    elif s[0] == '+':
+        s = s[1:]
+    val = 0
+    for c in s:
+        val = val * 10 + (ord(c) - ord('0'))
+    return -val if neg else val
+
+def demander_nombre
