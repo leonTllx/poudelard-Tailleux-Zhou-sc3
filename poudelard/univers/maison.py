@@ -19,6 +19,9 @@ def afficher_maison_gagnante(maison):
         elif s== max_score:
             gagnantes.append(m)
     if len(gagnantes) == 1:
-        print(f"{Maison en tête : {gagnantes[0]} avec {max_score} points}")
+        print(f"Maison en tête : {gagnantes[0]} avec {max_score} points")
     else:
-        print(f"Maisons en ex aequo : {'.'} ")
+        print(f"Maisons en ex aequo : {','.join(gagnantes)} avec {max_score} points")
+
+def repartition_maison(joueur, questions):
+    scores = {"Gryffondor": 0, "Serpentard": 0, "Poufsouffle": 0, "Serdaigle": 0}
