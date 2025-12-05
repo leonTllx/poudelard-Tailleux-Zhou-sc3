@@ -1,0 +1,1 @@
+Stats_joueur = {"Nom": ,"Prenom":, "Argent": ,"Inventaire": ,"Sortilèges": ,"Attri"}
