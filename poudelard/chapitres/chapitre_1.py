@@ -11,7 +11,20 @@ def introduction():
     input("Appuyez sur Entrée pour continuer...")
 
 def creer_personnage():
+    nom = demander_texte("Entrez le nom de votre personnage : ")
+    prenom = demander_texte("Entrez le prenom de votre personnage : ")
+    print("\n Choisissez vos attributs : ")
+    courage = demander_nombre("Niveau de courage (1-10) : ", 1, 10)
+    intelligence = demander_texte("Niveau d'intelligence (1-10) : ", 1, 10)
+    loyaute = demander_nombre("Niveau de loyauté (1-10) : ", 1, 10)
+    ambition = demander_nombre("Niveau d'ambition (1-10) : ", 1, 10)
 
+attributs = {
+    "courage": courage,
+    "intelligence": intelligence,
+    "loyauté": loyaute,
+    "ambition": ambition,
+}
 
 def introduction():
     print("*********************************************************")
