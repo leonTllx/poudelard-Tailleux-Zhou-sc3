@@ -58,7 +58,8 @@ def demander_choix(message, options):
         for i, opt in enumerate(options, start=1):
             print(f"{i}. {opt}")
         choix = demander_nombre("Votre choix : ", 1, len(options))
-                return options[choix - 1]
+        return options[choix - 1]
 
 def load_fichier(chemin_fichier):
     with open(chemin_fichier, 'r', encoding='utf-8') as f:
+        return json.load(f)
