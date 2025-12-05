@@ -34,7 +34,7 @@ def repartition_maison(joueur, questions):
     scores["Poufsouffle"] += loyaute*2
     scores["Serdaigle"] += intelligence*2
 
-    from utils.input_utils import demander_choix
+    from utils.input_utils import demander_demo
 
     for (texte, options, maisons_assoc) in questions:
         choix = demander_choix(texte, options)
