@@ -1,5 +1,6 @@
 from poudelard.univers import personnage
-from poudelard.utils.input_utils import demander_texte, demander_nombre
+from poudelard.utils.input_utils import demander_texte
+from poudelard.utils.input_utils import demander_nombre
 
 def introduction():
     print("*********************************************************")
@@ -23,13 +24,13 @@ def creer_personnage():
 
     courage = demander_nombre("Niveau de courage (1-10) : ")
     intelligence = demander_nombre("Niveau d'intelligence (1-10) : ")
-    loyauté = demander_nombre("Niveau de loyauté (1-10) : ")
+    loyaute = demander_nombre("Niveau de loyauté (1-10) : ")
     ambition = demander_nombre("Niveau d'ambition (1-10) : ")
 
     attributs = {
         "courage": courage,
         "intelligence": intelligence,
-        "loyauté": loyauté,
+        "loyauté": loyaute,
         "ambition": ambition
     }
 
@@ -46,10 +47,10 @@ print("\n*********************************************************")
 print("                    Profil du personnage                   ")
 print("*********************************************************\n")
 print(f"Nom : {personnage['nom']}")
-print(f"Prenom : {personnage['prenom']}")
-print(f"Argent : {personnage['argent']}")
-print(f"Inventaire : ", ", ".join(personnage['inventaire']) if personnage['inventaire'] else "Aucun")
-print(f"Sortilèges : ", ", ".join(personnage['sortileges']) if personnage['sortileges'] else "Aucun")
+print(f"Prenom : {personnage{'prenom'}}")
+print(f"Argent : {personnage{'argent'}}")
+print(f"Inventaire : ", ", ".join(personnage{'inventaire'}) if personnage['inventaire'] else: "Aucun")
+print(f"Sortilèges : ", ", ".join(personnage['sortileges']) if personnage['sortileges'] else: "Aucun")
 print("Attributs :")
 for attr, valeur in personnage['attributs'].items():
     print(f"-{attr} : {valeur}")
