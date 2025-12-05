@@ -8,3 +8,9 @@ print("1. Oui")
 print("2. Non")
 choix_continuer = input("Votre choix")
 
+def demander_texte(message):
+    texte = input(message).strip()
+    while texte == "":
+        print("Erreur, la saisie ne peut pas être vide")
+        texte = input(message).strip()
+    return texte
