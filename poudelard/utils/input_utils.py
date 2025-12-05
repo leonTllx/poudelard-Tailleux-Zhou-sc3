@@ -36,4 +36,20 @@ def to_int(s):
         val = val * 10 + (ord(c) - ord('0'))
     return -val if neg else val
 
-def demander_nombre
+def demander_nombre(message, min_val=None, max_val=None):
+    """La je demande un entier et je rajoute les bornes, supp si t'as compris"""
+    while True:
+        s = input(message)
+        if not is_int_string(s):
+            print("Veuillez entrer un nombre entier valide.")
+            continue
+        n = to_int(s)
+        if min_val is not None and n < min_val:
+            print(f"Veuillez entrer un nombre entre {min_val} et {max_val if max_val is not None else 'infinie'}.")
+            continue
+        if max_val is not None and n > max_val:
+            print(f"Veuillez entrer un nombre entre {min_val if min_val is not None else '-infinie'} et {max_val}.")
+            continue
+        return n
+
+def demander_choix(message, options):
