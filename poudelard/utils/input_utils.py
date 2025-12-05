@@ -23,7 +23,6 @@ def is_int_string(s):
     return True
 
 def to_int(s):
-    """en gros  ca convertit une chaine en entier en utilisant ord(), supp si t'as compris"""
     s = s.strip()
     neg = False
     if s[0] == '-':
@@ -37,7 +36,6 @@ def to_int(s):
     return -val if neg else val
 
 def demander_nombre(message, min_val=None, max_val=None):
-    """La je demande un entier et je rajoute les bornes, supp si t'as compris"""
     while True:
         s = input(message)
         if not is_int_string(s):
