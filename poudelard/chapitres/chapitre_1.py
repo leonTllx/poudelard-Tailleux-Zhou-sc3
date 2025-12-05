@@ -16,9 +16,9 @@ def introduction():
     input("Appuyez sur Entrée pour continuer et débuter votre aventure...")
 
 def creer_personnage():
-    nom= input("Veuillez entrer le nom du personnage : ")
-    prenom= input("Veuillez entrer le prénom du personnage : ")
-    print(f"\nBienvenue,{prenom} {nom} ! Il est temps de choisir vos qualités.")
+    nom = input("Veuillez entrer le nom du personnage : ")
+    prenom = input("Veuillez entrer le prénom du personnage : ")
+    print(f"\nBienvenue, {prenom} {nom} ! Il est temps de choisir vos qualités.")
     print("Attribuez un niveau de 1 à 10 à chacune des qualités suivantes :\n")
 
     courage = demander_nombre("Niveau de courage (1-10) : ")
@@ -38,6 +38,7 @@ def creer_personnage():
         "prenom": prenom,
         "argent": 100,
         "inventaire": [],
+        "sortilèges": [],
         "attributs": attributs
     }
 
