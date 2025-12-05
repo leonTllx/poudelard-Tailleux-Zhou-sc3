@@ -19,12 +19,37 @@ def creer_personnage():
     loyaute = demander_nombre("Niveau de loyauté (1-10) : ", 1, 10)
     ambition = demander_nombre("Niveau d'ambition (1-10) : ", 1, 10)
 
-attributs = {
-    "courage": courage,
-    "intelligence": intelligence,
-    "loyauté": loyaute,
-    "ambition": ambition,
-}
+    attributs = {
+        "courage": courage,
+        "intelligence": intelligence,
+        "loyauté": loyaute,
+        "ambition": ambition,
+    }
+
+    joueur = initialisation_personnage(nom, prénom, attributs)
+    print("\n Profil du personnage initialisé : ")
+    afficher_personnage(joueur)
+    return joueur
+
+def recevoir_lettre():
+    print("\n Une chouette traverse la fenêtre et vous apporte une lettre scellée du sceau de Poudlard...")
+    print("\n Cher élève, \n Nous avons le plaisir de vous informer que vous avez été admis à lécole de sorcellerie de Poudlard !\n")
+    choix = demander_nombre("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?\n" "1. Oui, bien sûr !\n" "2. Non, je préfère rester avec l'oncle Vernon...\n" "Votre choix : ", 1, 2)
+    if choix == 2:
+        print("\n Vous déchirez la lettre, l'oncle Vernon pousse un cri de joie :\n" "EXCELLENT ! Enfin quelqu'un de NORMAL dans cette maison !\n" "Le monde magique ne saura jamais que vous existiez... Fin du jeu.")
+        exit(0)
+
+def rencontrer_Hagrid(personnage):
+    print("\n Hagrid : 'Salut ! Je sui venu t'aider à faire tes achats sur le Chemin de Traverse.'")
+    choisir = demander_nombre("Voulez-vous suivre Hagrid ?\n1. Oui\n2. Non\nVotre choix : ", 1, 2)
+    if choisir == 2:
+        print("Hagrid insiste gentiment et vous entraîne quand même avec lui !")
+    else:
+        print("Vous suivez Hagrid vers le Chemin de Traverse.")
+
+def acheter_fourniture(personnage):
+
+
 
 def introduction():
     print("*********************************************************")
