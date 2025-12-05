@@ -1,6 +1,5 @@
 import json
 def demander_texte(message):
-    """Demander un texte non vide; répète tant que la saisie est vide."""
     while True:
         s = input(message).strip()
         if s:
@@ -8,7 +7,6 @@ def demander_texte(message):
         print("Veuillez saisir un texte non vide")
 
 def is_int_string(s):
-    """Retourne True si s représente un entier signé sans utiliser int()"""
     s = s.strip()
     if not s:
         return False
