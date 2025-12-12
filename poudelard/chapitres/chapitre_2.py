@@ -51,3 +51,32 @@ def rencontrer_amis(joueur):
     print("\nTes attributs sont mis à jour :", joueur["attributs"])
 
     return joueur
+
+def mot_de_bienvenue():
+    print("«Bienvenue à Pourdlard, jeunes sorciers et sorcières.")
+    print("L'année qui s'annonce sera pleine de décourvertes, de défis, et surtout d'occasions de prouver qui vous êtes vraiment.» \n")
+    print("-Professeur Albus Dumbledore\n")
+
+    input("Appuyez sur Entrée pour continuer...")
+
+def ceremonie_repartition(joueur):
+    print("\nLa cérémonie de répartition commence dans la Grande Salle...")
+    print("Le Choixpeau magique t'observe longuement avant de poser ses questions : ")
+    questions = [
+        (
+            "Tu vois un ami en danger. Que fais-tu ?",
+            ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l’aide", "Je reste calme et j’observe"],
+        ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Quel trait te décrit le mieux ?",
+            ["Courageux et loyal", "Rusé et ambitieux", "Patient et travailleur", "Intelligent et curieux"],
+             ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Face à un défi difficile, tu...",
+            ["Fonces sans hésiter", "Cherches la meilleure stratégie",
+             "Comptes sur tes amis", "Analyses le problème"],
+            ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        )
+    ]
