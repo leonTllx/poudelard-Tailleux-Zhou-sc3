@@ -13,52 +13,34 @@ from poudelard.univers.personnage import (
 
 def _choisir_option(message, options):
     choix = demander_choix(message, options)
-
     if isinstance(choix, int):
-        if choix < 1 or choix > len(options):
-            print("Choix hors des bornes.")
-            return _choisir_option(message, options)
-        return options[choix - 1]
-
+        if 1 <= choix <= len(options):
+            return options[choix - 1]
+        return _choisir_option(message, options)
     if choix not in options:
         try:
             idx = int(str(choix))
             if 1 <= idx <= len(options):
                 return options[idx - 1]
-        except (ValueError, TypeError):
+        except Exception:
             pass
-        print("Choix invalide.")
         return _choisir_option(message, options)
     return choix
 
-def _to_int_prix(raw):
-    if isinstance(raw, (int, float)):
-        return int(raw)
-    if isinstance(raw, str):
-        s = raw.strip()
-        digits = "".join(ch for ch in s if ch.isdigit())
-        if digits == "":
-            print(f"Erreur: prix invalide (« {raw} »). Attendu un nombre.")
-            exit(1)
-        return int(digits)
-    print(f"Erreur: type de prix invalide ({type(raw).__name__}).")
-    exit(1)
-
-def _normaliser_catalogue(donnees_catalogue):
-    items = []
-    if isinstance(donnees_catalogue, dict):
-        for nom, prix in donnees_catalogue.items():
-            items.append((str(nom), _to_int_prix(prix)))
-    elif isinstance(donnees_catalogue, list):
-        for objet in donnees_catalogue:
-            if not isinstance(objet, dict) or "nom" not in objet or "prix" not in objet:
-                print("Erreur : chaque entrée du catalogue doit contenir 'nom' et 'prix'.")
-                exit(1)
-            items.append((str(objet["nom"]), _to_int_prix(objet["prix"])))
-    else:
-        print("Erreur : format du fichier inventaire.json invalide.")
+def _normaliser_catalogue_depuis_index(donnees_catalogue):
+    if not isinstance(donnees_catalogue, dict):
+        print("Catalogue invalide: type racine attendu dict.")
         exit(1)
-
+    items = []
+    for k, v in donnees_catalogue.items():
+        if not isinstance(v, (list, tuple)) or len(v) != 2:
+            print("Catalogue invalide: chaque valeur doit être [nom, prix].")
+            exit(1)
+        nom, prix = v[0], v[1]
+        if not isinstance(nom, str) or not isinstance(prix, int):
+            print("Catalogue invalide: 'nom' doit être str et 'prix' doit être int.")
+            exit(1)
+        items.append((nom, prix))
     items.sort(key=lambda x: x[0].lower())
     return items
 
@@ -122,11 +104,7 @@ def rencontrer_hagrid(joueur):
     prenom = joueur.get("Prenom", "")
     print(f"Hagrid : « Salut {prenom} ! Je suis venu t’aider à faire tes achats sur le Chemin de Traverse. »")
 
-    rep = _choisir_option(
-        "Voulez-vous suivre Hagrid ?",
-        ["Oui", "Non"]
-    )
-
+    rep = _choisir_option("Voulez-vous suivre Hagrid ?", ["Oui", "Non"])
     if rep == "Non":
         print("Hagrid insiste gentiment et t’entraîne quand même avec lui !")
     else:
@@ -134,9 +112,12 @@ def rencontrer_hagrid(joueur):
 
 def acheter_fournitures(joueur):
     print("\nBienvenue sur le Chemin de Traverse !")
+    try:
+        donnees = load_fichier("poudelard/data/inventaire.json")
+    except FileNotFoundError:
+        donnees = load_fichier("../data/inventaire.json")
 
-    donnees = load_fichier("poudelard/data/inventaire.json")
-    items = _normaliser_catalogue(donnees)
+    items = _normaliser_catalogue_depuis_index(donnees)
     _afficher_catalogue(items)
 
     prix_par_nom = {nom: prix for (nom, prix) in items}
@@ -155,7 +136,6 @@ def acheter_fournitures(joueur):
         else:
             print("Tous les objets obligatoires ont été achetés !")
             print("Il est temps de choisir votre animal de compagnie pour Poudlard !")
-
     print(f"Vous avez {joueur['Argent']} galions.")
     recap_obligatoires()
 
@@ -168,11 +148,9 @@ def acheter_fournitures(joueur):
         if nom_choisi in joueur["Inventaire"] and nom_choisi in obligatoires:
             print(f"Vous avez déjà acheté : {nom_choisi}.")
             continue
-
         if joueur["Argent"] < prix_choisi:
             print("Vous n’avez pas assez d’argent pour cet achat... Fin du jeu.")
             exit(0)
-
         modifier_argent(joueur, -prix_choisi)
         ajouter_objet(joueur, "Inventaire", nom_choisi)
         print(f"Vous avez acheté : {nom_choisi} (-{prix_choisi} galions).")
@@ -180,13 +158,11 @@ def acheter_fournitures(joueur):
 
         if nom_choisi in obligatoires_restants:
             obligatoires_restants.remove(nom_choisi)
-
         if not _reste_abordable(joueur, obligatoires_restants, prix_par_nom):
             print("Il ne vous reste plus assez d’argent pour compléter les objets obligatoires...")
             print("Le directeur vous renvoie chez les Dursley. Fin du jeu.")
             exit(0)
         recap_obligatoires()
-
     print(f"\nVous avez {joueur['Argent']} galions. Voici les animaux disponibles :")
     animaux = [("Chouette", 20), ("Chat", 15), ("Rat", 10), ("Crapaud", 5)]
     labels_animaux = [f"{nom} - {prix} galions" for (nom, prix) in animaux]
@@ -197,14 +173,11 @@ def acheter_fournitures(joueur):
     if joueur["Argent"] < prix_animal:
         print("Pas assez d’argent pour l’animal choisi... Fin du jeu.")
         exit(0)
-
     modifier_argent(joueur, -prix_animal)
     ajouter_objet(joueur, "Inventaire", nom_animal)
     print(f"Vous avez choisi : {nom_animal} (-{prix_animal} galions).")
-
     print("\nVoici votre inventaire final :")
     afficher_personnage(joueur)
-
 
 def lancer_chapitre_1():
     introduction()
@@ -213,4 +186,3 @@ def lancer_chapitre_1():
     rencontrer_hagrid(joueur)
     acheter_fournitures(joueur)
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard...")
-    return joueur

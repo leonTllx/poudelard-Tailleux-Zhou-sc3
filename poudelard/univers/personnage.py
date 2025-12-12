@@ -3,7 +3,7 @@ def initialiser_personnage(nom, prenom, attributs):
         "Nom":nom,
         "Prenom":prenom,
         "Argent":100,
-        "Inventaires":[],
+        "Inventaire":[],
         "Sortilèges":[],
         "Attributs":dict(attributs),
         "Maison":None,
