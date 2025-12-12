@@ -70,6 +70,29 @@ def acheter_fourniture(personnage):
         if nom_ob not in prix_par_nom:
             print(f"L'objet obligatoire '{nom_ob}' est manquant dans le catalogue.")
             exit(1)
+    obligatoires_restants = obligatoires[:]
+
+    def afficher_catalogue():
+        print("Catalogue des objets disponibles :")
+        for i, (nom, prix) in enumerate(items, start=1):
+            print(f"{i}. {nom} - {prix} galions")
+    def recap_obligatoires():
+        if obligatoires_restants:
+            print("Objets obligatoires restants à acheter : " + ", ".join(obligatoires_restants))
+        else :
+            print("Tous les objets obligatoires ont été achetés ! \nIl est temps de choisir votre animal de compagnie pour Poudlard !")
+    def reste_abordable():
+        if not obligatoires_restants:
+            return True
+        cout_min = min(prix_par_nom[n] for n in obligatoires_restants)
+        return personnage["Argent"] >= cout_min
+
+    afficher_catalogue()
+    print(f"Vous avez {personnage['Argent']} galions")
+    recap_obligatoires()
+
+    while obligatoires_restants:
+        options = [f""]
 
 def introduction():
     print("*********************************************************")
