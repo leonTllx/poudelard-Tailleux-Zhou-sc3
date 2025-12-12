@@ -26,7 +26,7 @@ def creer_personnage():
         "ambition": ambition,
     }
 
-    joueur = initialisation_personnage(nom, prénom, attributs)
+    joueur = initialisation_personnage(nom, prenom, attributs)
     print("\n Profil du personnage initialisé : ")
     afficher_personnage(joueur)
     return joueur
@@ -48,6 +48,19 @@ def rencontrer_Hagrid(personnage):
         print("Vous suivez Hagrid vers le Chemin de Traverse.")
 
 def acheter_fourniture(personnage):
+    print("Bienvenue sur le chemin de Traverse !")
+    donnees = load_fichier("poudelard/data/inventaire.json")
+    items = []
+    if isinstance(donnees, dict):
+        for nom,prix in donnees.items():
+            items.append((str(nom),int(prix)))
+    elif isinstance(donnees, list):
+        for elt in donnees:
+            nom = str(elt.get("nom"))
+            prix = int(elt.get("prix"))
+            items.append((nom, prix))
+    else :
+        exit(1)
 
 
 
