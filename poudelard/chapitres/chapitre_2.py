@@ -1,3 +1,6 @@
+from poudelard.univers.maison import repartition_maison
+
+
 def rencontrer_amis(joueur):
     print("-Salut ! Moi c'est Ron Weasley. Tu veux qu'on s'assoie ensemble ?")
     print("Que répondez-vous ?")
@@ -40,7 +43,7 @@ def rencontrer_amis(joueur):
     if choix_drago == "1":
         joueur["attributs"]["ambition"]+=1
     if choix_drago == "2":
-        joueur["attributs"]["loyauté"]+=1
+        joueur["attributs"]["loyaute"]+=1
     if choix_drago == "3":
         joueur["attributs"]["courage"]+=1
 
@@ -80,3 +83,63 @@ def ceremonie_repartition(joueur):
             ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
         )
     ]
+    maison = repartition_maison(joueur, questions)
+    joueur["Maison"] = maison
+
+    print(f"Le Choixpeau Magique s'exclame : {maison} !!!")
+    if maison == "Gryffondor":
+        print("Tu rejoins les élèves de Gryffondor sous les acclamations !")
+    elif maison == "Serpentard":
+        print("Tu rejoins les élèves de Serpentard, certains te regardent avec curiosité...")
+    elif maison == "Poufsouffle":
+        print("Tu rejoins les élèves de Poufsouffle qui t'accueillent chaleureusement !")
+    elif maison == "Serdaigle":
+        print("Tu rejoins les élèves de Serdaigle qui t'adressent un signe de bienvenue !")
+
+    return joueur
+
+import os
+import json
+
+def installation_salle_commune(joueur):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    fichier_maisons = os.path.join(base_dir, 'maisons.json')
+
+    try:
+        with open(fichier_maisons, 'r', encoding="utf-8") as f:
+            maisons_data= json.load(f)
+    except FileNotFoundError:
+        print("Erreur : le fichier maisons.json est introuvable.")
+        return
+    except json.JSONDecodeError:
+        print("Erreur : le fichier json contient des erreurs")
+        return
+
+    maison_joueur = joueur.get("Maison")
+    if maison_joueur not in maisons_data:
+        print(f"Erreur : la maison '{maison_joueur}' n'existe pas")
+        return
+    info_maison = maisons_data[maison_joueur]
+    description = info_maison.get("description","Aucune description disponible")
+    accueil = info_maison.get("accueil","")
+    couleurs = info_maison.get("couleurs",[])
+
+
+    print("\nVous suivez les préfets à travers les couloirs du chateau...")
+    print(f"{info_maison.get('emoji', '')}{info_maison.get('description', 'Aucune description disponible')}")
+    print(f"{info_maison.get('message_installation', '')}")
+    couleurs = info_maison.get("couleurs",[])
+    if couleurs:
+        print("Les couleurs de votre maison : ",",".join(couleurs))
+
+    bonus = info_maison.get("bonus_attributs",{})
+    for attr, valeur in bonus.items():
+        if attr in joueur["attributs"]:
+            joueur["attributs"][attr] += valeur
+        else:
+            joueur["attributs"][attr] = valeur
+    print("\nVos attributs ont été mis à jour avec les bonus de la maison :", joueur["attributs"])
+    input("Appuyez sur Entrée pour continuer...")
+
+def lancer_chapitre_2(personnage):
+    return rencontrer_amis(personnage), mot_de_bienvenue(), ceremonie_repartition(personnage), installation_salle_commune(personnage)
