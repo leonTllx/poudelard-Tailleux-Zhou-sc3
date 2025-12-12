@@ -62,7 +62,14 @@ def acheter_fourniture(personnage):
     else :
         exit(1)
 
-
+    items.sort(key=lambda x: x[0].lower())
+    prix_par_nom = {nom: prix for (nom, prix) in items}
+    noms_catalogue = [nom for (nom, _p) in items]
+    obligatoires = ["Baguette magique", "Robe de sorcier", "Manuel de potions"]
+    for nom_ob in obligatoires:
+        if nom_ob not in prix_par_nom:
+            print(f"L'objet obligatoire '{nom_ob}' est manquant dans le catalogue.")
+            exit(1)
 
 def introduction():
     print("*********************************************************")
