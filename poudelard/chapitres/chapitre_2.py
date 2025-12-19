@@ -13,7 +13,7 @@ def rencontrer_amis(joueur):
         print("Ron s'assoit avec vous. Vous discutez et riez ensemble. Votre loyauté augmente de 1.")
         joueur["Attributs"]["loyaute"]+=1
     elif choix_ron == "2":
-        print("Vous préférez rester seul. Votre ambition augmente de 1.")
+        print("Vous préférez rester seul. Votre ambition augmente de 1...")
         joueur["Attributs"]["ambition"]+=1
 
     print("—Bonjour je m'appelle Hermione Granger. Vous avez déjà lu 'Histoire de la Magie' ?" )
