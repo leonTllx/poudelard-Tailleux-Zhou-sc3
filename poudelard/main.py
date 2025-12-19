@@ -9,5 +9,3 @@ def main():
     personnage = lancer_chapitre_2(personnage)
     lancer_chapitre_3(personnage, maisons)
 
-if __name__ == "__main__":
-    main()
