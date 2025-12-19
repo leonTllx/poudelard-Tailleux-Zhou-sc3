@@ -84,7 +84,7 @@ def ceremonie_repartition(joueur):
 
     print(f"Le Choixpeau Magique s'exclame : {maison} !!!")
     if maison == "Gryffondor":
-        print("Tu rejoins les élèves de Gryffondor sous les acclamations !")
+        print("Tu rejoins les élèves de Gryffondor sous les acclamations !!!")
     elif maison == "Serpentard":
         print("Tu rejoins les élèves de Serpentard, certains te regardent avec curiosité...")
     elif maison == "Poufsouffle":
