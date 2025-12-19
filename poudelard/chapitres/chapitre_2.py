@@ -33,7 +33,7 @@ def rencontrer_amis(joueur):
     print("Comment réagissez-vous ?")
     print("1. Je lui serre la main poliment...")
     print("2. Je l’ignore complètement...")
-    print("3. Je lui réponds avec arrogance.")
+    print("3. Je lui réponds avec arrogance...")
     choix_drago = input("Votre choix ? : ")
     while choix_drago != "1" and choix_drago != "2" and choix_drago != "3":
         choix_drago = input("Votre choix ? : ")
