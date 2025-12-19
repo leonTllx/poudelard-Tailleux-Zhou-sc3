@@ -115,7 +115,7 @@ def acheter_fournitures(joueur):
     try:
         donnees = load_fichier("poudelard/data/inventaire.json")
     except FileNotFoundError:
-        donnees = load_fichier("../data/inventaire.json")
+        donnees = load_fichier("poudelard/data/inventaire.json")
 
     items = _normaliser_catalogue_depuis_index(donnees)
     _afficher_catalogue(items)
