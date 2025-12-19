@@ -10,7 +10,7 @@ def rencontrer_amis(joueur):
     while choix_ron != "1" and choix_ron != "2":
         choix_ron = input("Votre choix ? : ")
     if choix_ron == "1":
-        print("Ron s'assoit avec vous. Vous discutez et riez ensemble. Votre loyauté augmente de 1.")
+        print("Ron s'assoit avec vous. Vous discutez et riez ensemble. Votre loyauté augmente de 1...")
         joueur["Attributs"]["loyaute"]+=1
     elif choix_ron == "2":
         print("Vous préférez rester seul. Votre ambition augmente de 1...")
