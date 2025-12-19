@@ -143,4 +143,4 @@ def lancer_chapitre_2(joueur):
         joueur = ceremonie_repartition(joueur)
         installation_salle_commune(joueur)
         afficher_personnage(joueur)
-        print("Fin du Chapitre 2 — Bienvenue à Poudlard !!")
+        print("Fin du Chapitre 2 — Bienvenue à Poudlard !!!")
