@@ -105,7 +105,7 @@ def installation_salle_commune(joueur):
         with open(fichier_maisons, 'r', encoding="utf-8") as f:
             maisons_data= json.load(f)
     except FileNotFoundError:
-        print("Erreur : le fichier maisons.json est introuvable.")
+        print("Erreur : le fichier maisons.json est introuvable..")
         return
     except json.JSONDecodeError:
         print("Erreur : le fichier json contient des erreurs")
