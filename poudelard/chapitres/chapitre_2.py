@@ -19,7 +19,7 @@ def rencontrer_amis(joueur):
     print("—Bonjour je m'appelle Hermione Granger. Vous avez déjà lu 'Histoire de la Magie' ?" )
     print("Que répondez-vous ?")
     print("1. Oui, j’adore apprendre de nouvelles choses !")
-    print("2. Euh… non, je préfère les aventures aux bouquins.")
+    print("2. Euh… non, je préfère les aventures aux bouquins...")
     choix_hermione = input("Votre choix ? : ")
     while choix_hermione != "1" and choix_hermione != "2":
         choix_hermione = input("Votre choix ? : ")
