@@ -53,7 +53,7 @@ def rencontrer_amis(joueur):
 
 def mot_de_bienvenue():
     print("«Bienvenue à Pourdlard, jeunes sorciers et sorcières.")
-    print("L'année qui s'annonce sera pleine de décourvertes, de défis, et surtout d'occasions de prouver qui vous êtes vraiment.» \n")
+    print("L'année qui s'annonce sera pleine de décourvertes, de défis, et surtout d'occasions de prouver qui vous êtes vraiment...» \n")
     print("-Professeur Albus Dumbledore\n")
 
     input("Appuyez sur Entrée pour continuer...")
