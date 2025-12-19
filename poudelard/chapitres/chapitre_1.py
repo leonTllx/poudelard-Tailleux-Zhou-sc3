@@ -1,15 +1,5 @@
-from poudelard.utils.input_utils import (
-    demander_texte,
-    demander_nombre,
-    demander_choix,
-    load_fichier,
-)
-from poudelard.univers.personnage import (
-    initialiser_personnage,
-    afficher_personnage,
-    modifier_argent,
-    ajouter_objet,
-)
+from poudelard.utils.input_utils import *
+from poudelard.univers.personnage import *
 
 def _choisir_option(message, options):
     choix = demander_choix(message, options)
@@ -186,3 +176,4 @@ def lancer_chapitre_1():
     rencontrer_hagrid(joueur)
     acheter_fournitures(joueur)
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard...")
+    return
