@@ -10,10 +10,10 @@ def rencontrer_amis(joueur):
         choix_ron = input("Votre choix ? : ")
     if choix_ron == "1":
         print("Ron s'assoit avec vous. Vous discutez et riez ensemble. Votre loyauté augmente de 1.")
-        joueur["attributs"]["loyaute"]+=1
+        joueur["Attributs"]["loyaute"]+=1
     elif choix_ron == "2":
         print("Vous préférez rester seul. Votre ambition augmente de 1.")
-        joueur["attributs"]["ambition"]+=1
+        joueur["Attributs"]["ambition"]+=1
 
     print("—Bonjour je m'appelle Hermione Granger. Vous avez déjà lu 'Histoire de la Magie' ?" )
     print("Que répondez-vous ?")
@@ -23,9 +23,9 @@ def rencontrer_amis(joueur):
     while choix_hermione != "1" and choix_hermione != "2":
         choix_hermione = input("Votre choix ? : ")
     if choix_hermione == "1":
-        joueur["attributs"]["intelligence"]+=1
+        joueur["Attributs"]["intelligence"]+=1
     elif choix_hermione == "2":
-        joueur["attributs"]["courage"]+=1
+        joueur["Attributs"]["courage"]+=1
 
 
     print("—Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
@@ -37,11 +37,11 @@ def rencontrer_amis(joueur):
     while choix_drago != "1" and choix_drago != "2" and choix_drago != "3":
         choix_drago = input("Votre choix ? : ")
     if choix_drago == "1":
-        joueur["attributs"]["ambition"]+=1
+        joueur["Attributs"]["ambition"]+=1
     if choix_drago == "2":
-        joueur["attributs"]["loyaute"]+=1
+        joueur["Attributs"]["loyaute"]+=1
     if choix_drago == "3":
-        joueur["attributs"]["courage"]+=1
+        joueur["Attributs"]["courage"]+=1
 
 
     print("\nLe train continue sa route. Le château de Poudlard se profile à l'horizon..")
@@ -129,11 +129,11 @@ def installation_salle_commune(joueur):
 
     bonus = info_maison.get("bonus_attributs",{})
     for attr, valeur in bonus.items():
-        if attr in joueur["attributs"]:
-            joueur["attributs"][attr] += valeur
+        if attr in joueur["Attributs"]:
+            joueur["Attributs"][attr] += valeur
         else:
-            joueur["attributs"][attr] = valeur
-    print("\nVos attributs ont été mis à jour avec les bonus de la maison :", joueur["attributs"])
+            joueur["Attributs"][attr] = valeur
+    print("\nVos attributs ont été mis à jour avec les bonus de la maison :", joueur["Attributs"])
     input("Appuyez sur Entrée pour continuer...")
 
 def lancer_chapitre_2(joueur):
