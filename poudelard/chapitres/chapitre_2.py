@@ -1,4 +1,6 @@
 from poudelard.univers.maison import repartition_maison
+from poudelard.univers.personnage import afficher_personnage
+
 
 def rencontrer_amis(joueur):
     print("-Salut ! Moi c'est Ron Weasley. Tu veux qu'on s'assoie ensemble ?")
@@ -141,4 +143,9 @@ def installation_salle_commune(joueur):
     input("Appuyez sur Entrée pour continuer...")
 
 def lancer_chapitre_2(joueur):
-    return rencontrer_amis(joueur), mot_de_bienvenue(), ceremonie_repartition(joueur), installation_salle_commune(joueur)
+        joueur = rencontrer_amis(joueur)
+        mot_de_bienvenue()
+        joueur = ceremonie_repartition(joueur)
+        installation_salle_commune(joueur)
+        afficher_personnage(joueur)
+        print("Fin du Chapitre 2 — Bienvenue à Poudlard !")
