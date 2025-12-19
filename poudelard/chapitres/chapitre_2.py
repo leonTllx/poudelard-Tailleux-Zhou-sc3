@@ -1,6 +1,5 @@
 from poudelard.univers.maison import repartition_maison
 
-
 def rencontrer_amis(joueur):
     print("-Salut ! Moi c'est Ron Weasley. Tu veux qu'on s'assoie ensemble ?")
     print("Que répondez-vous ?")
@@ -141,5 +140,5 @@ def installation_salle_commune(joueur):
     print("\nVos attributs ont été mis à jour avec les bonus de la maison :", joueur["attributs"])
     input("Appuyez sur Entrée pour continuer...")
 
-def lancer_chapitre_2(personnage):
-    return rencontrer_amis(personnage), mot_de_bienvenue(), ceremonie_repartition(personnage), installation_salle_commune(personnage)
+def lancer_chapitre_2(joueur):
+    return rencontrer_amis(joueur), mot_de_bienvenue(), ceremonie_repartition(joueur), installation_salle_commune(joueur)
