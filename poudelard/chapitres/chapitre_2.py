@@ -45,7 +45,7 @@ def rencontrer_amis(joueur):
         joueur["Attributs"]["courage"]+=1
 
 
-    print("\nLe train continue sa route. Le château de Poudlard se profile à l'horizon..")
+    print("\nLe train continue sa route. Le château de Poudlard se profile à l'horizon...")
     print("\nTes choix semblent déjâ en dire long sur ta personnalité !")
     print("\nTes attributs sont mis à jour :", joueur["attributs"])
 
