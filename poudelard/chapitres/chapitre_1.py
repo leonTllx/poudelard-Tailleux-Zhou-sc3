@@ -113,7 +113,7 @@ def rencontrer_hagrid(joueur):
 def acheter_fournitures(joueur):
     print("\nBienvenue sur le Chemin de Traverse !")
     try:
-        donnees = load_fichier("poudelard/data/inventaire.json")
+        donnees = load_fichier("data/inventaire.json")
     except FileNotFoundError:
         donnees = load_fichier("poudelard/data/inventaire.json")
 
