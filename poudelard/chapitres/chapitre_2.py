@@ -16,8 +16,6 @@ def rencontrer_amis(joueur):
         print("Vous préférez rester seul. Votre ambition augmente de 1.")
         joueur["attributs"]["ambition"]+=1
 
-    #RENCONTRE AVEC HERMIONE
-
     print("—Bonjour je m'appelle Hermione Granger. Vous avez déjà lu 'Histoire de la Magie' ?" )
     print("Que répondez-vous ?")
     print("1. Oui, j’adore apprendre de nouvelles choses !")
@@ -30,7 +28,6 @@ def rencontrer_amis(joueur):
     elif choix_hermione == "2":
         joueur["attributs"]["courage"]+=1
 
-    #RENCONTRE AVEC DRAGO MALEFOY
 
     print("—Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
     print("Comment réagissez-vous ?")
@@ -47,7 +44,6 @@ def rencontrer_amis(joueur):
     if choix_drago == "3":
         joueur["attributs"]["courage"]+=1
 
-    #FIN DE LA SCENE
 
     print("\nLe train continue sa route. Le château de Poudlard se profile à l'horizon..")
     print("\nTes choix semblent déjâ en dire long sur ta personnalité !")
