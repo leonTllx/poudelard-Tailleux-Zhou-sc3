@@ -108,7 +108,7 @@ def installation_salle_commune(joueur):
         print("Erreur : le fichier maisons.json est introuvable..")
         return
     except json.JSONDecodeError:
-        print("Erreur : le fichier json contient des erreurs")
+        print("Erreur : le fichier json contient des erreurs..")
         return
 
     maison_joueur = joueur.get("Maison")
