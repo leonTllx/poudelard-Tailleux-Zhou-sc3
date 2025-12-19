@@ -90,7 +90,7 @@ def ceremonie_repartition(joueur):
     elif maison == "Poufsouffle":
         print("Tu rejoins les élèves de Poufsouffle qui t'accueillent chaleureusement !")
     elif maison == "Serdaigle":
-        print("Tu rejoins les élèves de Serdaigle qui t'adressent un signe de bienvenue !")
+        print("Tu rejoins les élèves de Serdaigle qui t'adressent un signe de bienvenue !!!")
 
     return joueur
 
