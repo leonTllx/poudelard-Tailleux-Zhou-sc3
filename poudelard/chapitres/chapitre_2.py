@@ -1,5 +1,5 @@
-from poudelard.univers.maison import repartition_maison
 from poudelard.chapitres.chapitre_1 import *
+from poudelard.univers.maison import *
 
 def rencontrer_amis(joueur):
     print("-Salut ! Moi c'est Ron Weasley. Tu veux qu'on s'assoie ensemble ?")

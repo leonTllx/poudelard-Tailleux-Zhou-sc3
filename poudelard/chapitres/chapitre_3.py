@@ -1,7 +1,6 @@
 import random
-from poudelard.utils.input_utils import *
+from poudelard.chapitres.chapitre_2 import *
 from poudelard.univers.maison import *
-from poudelard.univers.personnage import *
 
 def apprendre_sorts(joueur, chemin_fichier="poudelard/data/sorts.json"):
     tous_les_sorts = load_fichier(chemin_fichier)
@@ -28,7 +27,6 @@ def apprendre_sorts(joueur, chemin_fichier="poudelard/data/sorts.json"):
 
 def quiz_magie(joueur, chemin_fichier="poudelard/data/quiz_magie.json"):
     questions = load_fichier(chemin_fichier)
-
     questions_tirees = []
     while len(questions_tirees) < 4:
         q = random.choice(questions)
@@ -36,7 +34,6 @@ def quiz_magie(joueur, chemin_fichier="poudelard/data/quiz_magie.json"):
             questions_tirees.append(q)
     score = 0
     print("\n=== Début du Quiz de Magie ===")
-
     for q in questions_tirees:
         print(q["question"])
         reponse = input("> ")
@@ -50,16 +47,10 @@ def quiz_magie(joueur, chemin_fichier="poudelard/data/quiz_magie.json"):
 
 def lancer_chapitre_3(personnage, maisons):
     print("\n===== CHAPITRE 3 — Les cours à Poudlard =====\n")
-
     apprendre_sorts(personnage)
-
     points = quiz_magie(personnage)
-
     nom_maison = personnage["Maison"]
     actualiser_points_maison(maisons, nom_maison, points)
-
     afficher_maison_gagnante(maisons)
-
     afficher_personnage(personnage)
-
     print("\nFin du Chapitre 3 !")
