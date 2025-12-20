@@ -79,13 +79,13 @@ def ceremonie_repartition(joueur):
             ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
         ),
     ]
-    nom_maison = repartition_maison(joueur, questions)  # calcule via attributs + réponses
+    nom_maison = repartition_maison(joueur, questions)
     joueur["Maison"] = nom_maison
     print(f"\nLe Choixpeau s’exclame : {nom_maison} !!!")
     print(f"Tu rejoins les élèves de {nom_maison} sous les acclamations !")
     return joueur
 
-def installation_salle_commune(joueur, chemin_fichier="../data/maisons.json"):
+def installation_salle_commune(joueur, chemin_fichier="data/maisons.json"):
     data_maisons = load_fichier(chemin_fichier)
     maison = joueur.get("Maison")
     info = data_maisons.get(maison, {})
