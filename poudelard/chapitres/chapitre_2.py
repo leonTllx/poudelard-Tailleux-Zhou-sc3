@@ -16,8 +16,6 @@ def rencontrer_amis(joueur):
         print("Vous préférez rester seul. Votre ambition augmente de 1.")
         joueur["attributs"]["ambition"]+=1
 
-    #RENCONTRE AVEC HERMIONE
-
     print("—Bonjour je m'appelle Hermione Granger. Vous avez déjà lu 'Histoire de la Magie' ?" )
     print("Que répondez-vous ?")
     print("1. Oui, j’adore apprendre de nouvelles choses !")
@@ -29,8 +27,6 @@ def rencontrer_amis(joueur):
         joueur["attributs"]["intelligence"]+=1
     elif choix_hermione == "2":
         joueur["attributs"]["courage"]+=1
-
-    #RENCONTRE AVEC DRAGO MALEFOY
 
     print("—Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
     print("Comment réagissez-vous ?")
@@ -47,19 +43,15 @@ def rencontrer_amis(joueur):
     if choix_drago == "3":
         joueur["attributs"]["courage"]+=1
 
-    #FIN DE LA SCENE
-
     print("\nLe train continue sa route. Le château de Poudlard se profile à l'horizon..")
     print("\nTes choix semblent déjâ en dire long sur ta personnalité !")
     print("\nTes attributs sont mis à jour :", joueur["attributs"])
-
     return joueur
 
 def mot_de_bienvenue():
     print("«Bienvenue à Pourdlard, jeunes sorciers et sorcières.")
     print("L'année qui s'annonce sera pleine de décourvertes, de défis, et surtout d'occasions de prouver qui vous êtes vraiment.» \n")
     print("-Professeur Albus Dumbledore\n")
-
     input("Appuyez sur Entrée pour continuer...")
 
 def ceremonie_repartition(joueur):
@@ -95,7 +87,6 @@ def ceremonie_repartition(joueur):
         print("Tu rejoins les élèves de Poufsouffle qui t'accueillent chaleureusement !")
     elif maison == "Serdaigle":
         print("Tu rejoins les élèves de Serdaigle qui t'adressent un signe de bienvenue !")
-
     return joueur
 
 import os
@@ -104,7 +95,6 @@ import json
 def installation_salle_commune(joueur):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     fichier_maisons = os.path.join(base_dir, 'maisons.json')
-
     try:
         with open(fichier_maisons, 'r', encoding="utf-8") as f:
             maisons_data= json.load(f)
@@ -124,14 +114,12 @@ def installation_salle_commune(joueur):
     accueil = info_maison.get("accueil","")
     couleurs = info_maison.get("couleurs",[])
 
-
     print("\nVous suivez les préfets à travers les couloirs du chateau...")
     print(f"{info_maison.get('emoji', '')}{info_maison.get('description', 'Aucune description disponible')}")
     print(f"{info_maison.get('message_installation', '')}")
     couleurs = info_maison.get("couleurs",[])
     if couleurs:
         print("Les couleurs de votre maison : ",",".join(couleurs))
-
     bonus = info_maison.get("bonus_attributs",{})
     for attr, valeur in bonus.items():
         if attr in joueur["attributs"]:
