@@ -54,3 +54,4 @@ def lancer_chapitre_3(personnage, maisons):
     afficher_maison_gagnante(maisons)
     afficher_personnage(personnage)
     print("\nFin du Chapitre 3 !")
+    return
