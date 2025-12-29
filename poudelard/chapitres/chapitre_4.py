@@ -102,3 +102,10 @@ def match_quidditch(joueur, maisons, chemin_fichier="data/equipes_quidditch.json
         actualiser_points_maison(maisons, maison_gagnante, 500)
         print(f"+500 points pour {maison_gagnante} ! Total : {maisons[maison_gagnante]}")
     return maison_gagnante
+
+def lancer_chapitre4_quidditch(joueur, maisons):
+    print("\n===== CHAPITRE 4 — Épreuve de Quidditch =====\n")
+    gagnante = match_quidditch(joueur, maisons, chemin_fichier="data/equipes_quidditch.json")
+    print("\nFin du Chapitre 4 — Quelle performance incroyable sur le terrain !")
+    afficher_maison_gagnante(maisons)
+    afficher_personnage(joueur)
