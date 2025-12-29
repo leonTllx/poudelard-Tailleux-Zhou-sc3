@@ -56,3 +56,49 @@ def afficher_equipe(maison, equipe):
     for j in equipe["joueurs"]:
         print(f"- {j}")
 
+def match_quidditch(joueur, maisons, chemin_fichier="data/equipes_quidditch.json"):
+    data_equipes = load_fichier(chemin_fichier)
+
+    maison_joueur = joueur.get("Maison")
+    toutes_maisons = list(data_equipes.keys())
+    adversaires = [m for m in toutes_maisons if m != maison_joueur]
+    maison_adverse = random.choice(adversaires)
+
+    equipe_joueur = creer_equipe(maison_joueur, data_equipes[maison_joueur], est_joueur=True, joueur=joueur)
+    equipe_adv = creer_equipe(maison_adverse, data_equipes[maison_adverse], est_joueur=False, joueur=None)
+
+    print(f"Match de Quidditch : {maison_joueur} vs {maison_adverse} !")
+    afficher_equipe(maison_joueur, equipe_joueur)
+    afficher_equipe(maison_adverse, equipe_adv)
+    print(f"Tu joues pour {maison_joueur} en tant qu’Attrapeur")
+
+    for tour in range(1, 21):
+        print(f"\n━━━ Tour {tour} ━━━")
+        tentative_marque(equipe_adv, equipe_joueur, joueur_est_joueur=False)
+        tentative_marque(equipe_joueur, equipe_adv, joueur_est_joueur=True)
+        afficher_score(equipe_joueur, equipe_adv)
+        if apparition_vifdor():
+            equipe_victorieuse = attraper_vifdor(equipe_joueur, equipe_adv)
+            print("Fin du match !")
+            afficher_score(equipe_joueur, equipe_adv)
+            actualiser_points_maison(maisons, equipe_victorieuse["nom"], 500)
+            print(f"+500 points pour {equipe_victorieuse['nom']} ! Total : {maisons[equipe_victorieuse['nom']]}")
+            return equipe_victorieuse["nom"]
+        input("Appuyez sur Entrée pour continuer")
+
+    print("\nFin du match !")
+    afficher_score(equipe_joueur, equipe_adv)
+    if equipe_joueur["score"] > equipe_adv["score"]:
+        maison_gagnante = equipe_joueur["nom"]
+        print(f"Résultat final : {maison_gagnante} gagne au score !")
+    elif equipe_joueur["score"] < equipe_adv["score"]:
+        maison_gagnante = equipe_adv["nom"]
+        print(f"Résultat final : {maison_gagnante} gagne au score !")
+    else:
+        maison_gagnante = None
+        print("Résultat final : Match nul !")
+
+    if maison_gagnante is not None:
+        actualiser_points_maison(maisons, maison_gagnante, 500)
+        print(f"+500 points pour {maison_gagnante} ! Total : {maisons[maison_gagnante]}")
+    return maison_gagnante
