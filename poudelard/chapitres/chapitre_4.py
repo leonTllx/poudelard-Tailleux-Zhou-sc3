@@ -39,3 +39,10 @@ def tentative_marque(equipe_attaque, equipe_defense, joueur_est_joueur=False):
 def apparition_vifdor():
     return random.randint(1,6) == 6
 
+def attraper_vifdor(e1, e2):
+    gagnant = random.choice([e1, e2])
+    gagnant["score"] += 150
+    gagnant["attrape_vifdor"] = True
+    print(f"Le Vif d'Or a été attrapé par {gagnant['nom']} ! (+150 points)")
+    return gagnant
+
