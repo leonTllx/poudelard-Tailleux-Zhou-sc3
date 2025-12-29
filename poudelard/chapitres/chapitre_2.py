@@ -106,4 +106,4 @@ def lancer_chapitre_2(joueur):
     installation_salle_commune(joueur)
     afficher_personnage(joueur)
     print("\nFin du Chapitre 2 — Les cours vont commencer...")
-    return
+    return joueur

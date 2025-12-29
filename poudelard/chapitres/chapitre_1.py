@@ -191,4 +191,4 @@ def lancer_chapitre_1():
     rencontrer_hagrid(joueur)
     acheter_fournitures(joueur)
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard...")
-    return
+    return joueur
