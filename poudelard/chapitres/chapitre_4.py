@@ -46,3 +46,13 @@ def attraper_vifdor(e1, e2):
     print(f"Le Vif d'Or a été attrapé par {gagnant['nom']} ! (+150 points)")
     return gagnant
 
+def afficher_score(e1, e2):
+    print("Score actuel :")
+    print(f"→ {e1['nom']} : {e1['score']} points")
+    print(f"→ {e2['nom']} : {e2['score']} points")
+
+def afficher_equipe(maison, equipe):
+    print(f"Équipe de {maison} :")
+    for j in equipe["joueurs"]:
+        print(f"- {j}")
+
