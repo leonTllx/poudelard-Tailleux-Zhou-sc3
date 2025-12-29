@@ -36,3 +36,6 @@ def tentative_marque(equipe_attaque, equipe_defense, joueur_est_joueur=False):
         equipe_defense["a_stoppe"] += 1
         print(f"{equipe_defense['nom']} bloque l'attaque !")
 
+def apparition_vifdor():
+    return random.randint(1,6) == 6
+
