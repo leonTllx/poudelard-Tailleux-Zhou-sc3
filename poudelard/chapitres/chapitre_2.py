@@ -85,7 +85,7 @@ def ceremonie_repartition(joueur):
     print(f"Tu rejoins les élèves de {nom_maison} sous les acclamations !")
     return joueur
 
-def installation_salle_commune(joueur, chemin_fichier="data/maisons.json"):
+def installation_salle_commune(joueur, chemin_fichier="poudelard/data/maisons.json"):
     data_maisons = load_fichier(chemin_fichier)
     maison = joueur.get("Maison")
     info = data_maisons.get(maison, {})
@@ -106,4 +106,4 @@ def lancer_chapitre_2(joueur):
     installation_salle_commune(joueur)
     afficher_personnage(joueur)
     print("\nFin du Chapitre 2 — Les cours vont commencer...")
-    return joueur
+    return

@@ -2,7 +2,7 @@ import random
 from poudelard.chapitres.chapitre_2 import *
 from poudelard.univers.maison import *
 
-def apprendre_sorts(joueur, chemin_fichier="data/sorts.json"):
+def apprendre_sorts(joueur, chemin_fichier="poudelard/data/sorts.json"):
     tous_les_sorts = load_fichier(chemin_fichier)
 
     quotas = {
@@ -25,7 +25,7 @@ def apprendre_sorts(joueur, chemin_fichier="data/sorts.json"):
     for s in sorts_appris:
         print(f"- {s['nom']} ({s['type']}) : {s['description']}")
 
-def quiz_magie(joueur, chemin_fichier="data/quiz_magie.json"):
+def quiz_magie(joueur, chemin_fichier="poudelard/data/quiz_magie.json"):
     questions = load_fichier(chemin_fichier)
     questions_tirees = []
     while len(questions_tirees) < 4:

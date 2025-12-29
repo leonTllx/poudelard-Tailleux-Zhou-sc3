@@ -1,18 +1,17 @@
 from poudelard.utils.input_utils import *
 from poudelard.univers.personnage import *
 
-
 def introduction():
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print("   Chapitre 1 — L’arrivée dans le monde magique")
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print("Bienvenue ! Une chouette tourne au-dessus de ta fenêtre...")
+    print("\nBienvenue ! Une chouette tourne au-dessus de ta fenêtre...")
     input("Appuie sur Entrée pour commencer l’aventure.")
 
 def creer_personnage():
-    nom = demander_texte("Entrez le nom de votre personnage : ")
+    nom = demander_texte("\nEntrez le nom de votre personnage : ")
     prenom = demander_texte("Entrez le prénom de votre personnage : ")
-    print("Choisissez vos attributs (entre 1 et 10) :")
+    print("\nChoisissez vos attributs (entre 1 et 10) :")
     courage = demander_nombre("Niveau de courage (1-10) : ", 1, 10)
     intelligence = demander_nombre("Niveau d’intelligence (1-10) : ", 1, 10)
     loyaute = demander_nombre("Niveau de loyauté (1-10) : ", 1, 10)
@@ -23,13 +22,13 @@ def creer_personnage():
         "loyauté": loyaute,
         "ambition": ambition,
     }
+    print()
     joueur = initialiser_personnage(nom, prenom, attributs)
-    print("\nProfil du personnage :")
     afficher_personnage(joueur)
     return joueur
 
 def recevoir_lettre():
-    print("\nUne chouette traverse la fenêtre et dépose une lettre scellée...")
+    print("\nUne chouette traverse la fenêtre et dépose une lettre scellée du sceau de Poudlard...")
     print("« Cher élève,")
     print("Nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard ! »\n")
     choix = demander_choix(
@@ -61,7 +60,7 @@ def rencontrer_hagrid(joueur):
     else:
         print("Tu suis Hagrid dans les rues animées du Chemin de Traverse.")
 
-def acheter_fournitures(joueur, chemin_fichier="data/inventaire.json", noms_catalogue=None):
+def acheter_fournitures(joueur, chemin_fichier="poudelard/data/inventaire.json", noms_catalogue=None):
     print("\nBienvenue sur le Chemin de Traverse !")
     catalogue = load_fichier(chemin_fichier)
     items = []
@@ -84,20 +83,20 @@ def acheter_fournitures(joueur, chemin_fichier="data/inventaire.json", noms_cata
     obligatoires = ["Baguette magique", "Robe de sorcier", "Manuel de potions"]
     for ob in obligatoires:
         if ob not in prix_par_nom:
-            print(f"Erreur : l’objet obligatoire « {ob} » est absent du catalogue.")
+            print(f"\nErreur : l’objet obligatoire « {ob} » est absent du catalogue.")
             exit(1)
     obligatoires_restants = obligatoires[:]
 
     def afficher_catalogue():
-        print("Catalogue des objets disponibles :")
+        print("\nCatalogue des objets disponibles :")
         for i, (nom_item, prix_item) in enumerate(items, start=1):
             print(f"{i}. {nom_item} - {prix_item} galions")
 
     def recap_obligatoires():
         if obligatoires_restants:
-            print("Objets obligatoires restant à acheter : " + ", ".join(obligatoires_restants))
+            print("\nObjets obligatoires restant à acheter : " + ", ".join(obligatoires_restants))
         else:
-            print("Tous les objets obligatoires ont été achetés !")
+            print("\nTous les objets obligatoires ont été achetés !")
             print("Il est temps de choisir votre animal de compagnie pour Poudlard !")
 
     def reste_abordable():
@@ -110,7 +109,7 @@ def acheter_fournitures(joueur, chemin_fichier="data/inventaire.json", noms_cata
     recap_obligatoires()
 
     while obligatoires_restants:
-        choix = demander_choix("Entrez le numéro de l’objet à acheter :", [f"{nom}" for nom in noms])
+        choix = demander_choix("\nEntrez le numéro de l’objet à acheter :", [f"{nom}" for nom in noms])
         if isinstance(choix, int):
             if 1 <= choix <= len(noms):
                 nom_choisi = noms[choix - 1]
@@ -192,4 +191,4 @@ def lancer_chapitre_1():
     rencontrer_hagrid(joueur)
     acheter_fournitures(joueur)
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard...")
-    return joueur
+    return
