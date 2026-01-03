@@ -1,7 +1,7 @@
 # 1. Présentation Générale
 
 ## 🎓 Titre du Projet
-Projet Poudelard – L’Art de Coder comme un Sorcier
+Projet Poudelard – l’art de coder comme un sorcier
 
 ## 📝 Description brève
 Ce projet consiste en la création d’un **jeu d’aventure textuel en Python**, inspiré de l’univers de Harry Potter.  
