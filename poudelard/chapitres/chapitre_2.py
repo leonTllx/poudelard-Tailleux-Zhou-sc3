@@ -10,11 +10,6 @@ def rencontrer_amis(joueur):
         "Que répondez-vous ?",
         ["Bien sûr, assieds-toi !", "Désolé, je préfère voyager seul."]
     )
-
-    if choix_ron == 1 or choix_ron == "1":
-        choix_ron = "Bien sûr, assieds-toi !"
-    elif choix_ron == 2 or choix_ron == "2":
-        choix_ron = "Désolé, je préfère voyager seul."
     if choix_ron == "Bien sûr, assieds-toi !":
         joueur["Attributs"]["loyauté"] += 1
     else:
@@ -25,10 +20,6 @@ def rencontrer_amis(joueur):
         "Que répondez-vous ?",
         ["Oui, j’adore apprendre !", "Non, je préfère l’aventure."]
     )
-    if choix_hermione == 1 or choix_hermione == "1":
-        choix_hermione = "Oui, j’adore apprendre !"
-    elif choix_hermione == 2 or choix_hermione == "2":
-        choix_hermione = "Non, je préfère l’aventure."
     if choix_hermione == "Oui, j’adore apprendre !":
         joueur["Attributs"]["intelligence"] += 1
     else:
@@ -39,12 +30,6 @@ def rencontrer_amis(joueur):
         "Comment réagissez-vous ?",
         ["Je lui serre la main poliment.", "Je l’ignore.", "Je réponds avec arrogance."]
     )
-    if choix_drago == 1 or choix_drago == "1":
-        choix_drago = "Je lui serre la main poliment."
-    elif choix_drago == 2 or choix_drago == "2":
-        choix_drago = "Je l’ignore."
-    elif choix_drago == 3 or choix_drago == "3":
-        choix_drago = "Je réponds avec arrogance."
     if choix_drago == "Je lui serre la main poliment.":
         joueur["Attributs"]["ambition"] += 1
     elif choix_drago == "Je l’ignore.":
@@ -87,17 +72,21 @@ def ceremonie_repartition(joueur):
 
 def installation_salle_commune(joueur, chemin_fichier="poudelard/data/maisons.json"):
     data_maisons = load_fichier(chemin_fichier)
-    maison = joueur.get("Maison")
-    info = data_maisons.get(maison, {})
+    maison = joueur["Maison"] if "Maison" in joueur else None
+    info = {}
+    if (type(data_maisons) is dict) and (maison in data_maisons):
+        info = data_maisons[maison]
     print("\nVous suivez les préfets à travers les couloirs du château...")
-    description = info.get("description", "Salle commune inconnue.")
-    bienvenue = info.get("bienvenue", "")
-    couleurs = info.get("couleurs", [])
-    print(description)
-    if bienvenue:
-        print(bienvenue)
-    if couleurs:
-        print("Les couleurs de votre maison :", ", ".join(couleurs))
+    if (type(info) is dict) and ("description" in info):
+        print(info["description"])
+    else:
+        print("Salle commune inconnue.")
+    if (type(info) is dict) and ("bienvenue" in info):
+        print(info["bienvenue"])
+    if (type(info) is dict) and ("couleurs" in info):
+        couleurs = info["couleurs"]
+        if (type(couleurs) is list) and (len(couleurs) > 0):
+            print("Les couleurs de votre maison :", ", ".join(couleurs))
 
 def lancer_chapitre_2(joueur):
     joueur = rencontrer_amis(joueur)

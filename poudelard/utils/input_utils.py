@@ -1,17 +1,17 @@
 import json
+
 def demander_texte(message):
     while True:
         s = input(message).strip()
         if s:
             return s
-        print("Veuillez saisir un texte non vide")
+        print("Veuillez saisir un texte non vide.")
 
 def is_int_string(s):
     s = s.strip()
     if not s:
         return False
-
-    if s[0] in '+-':
+    if s[0] in ('+', '-'):
         s_digits = s[1:]
     else:
         s_digits = s
@@ -24,12 +24,16 @@ def is_int_string(s):
 
 def to_int(s):
     s = s.strip()
+    if not s:
+        return 0
+
     neg = False
     if s[0] == '-':
         neg = True
         s = s[1:]
     elif s[0] == '+':
         s = s[1:]
+
     val = 0
     for c in s:
         val = val * 10 + (ord(c) - ord('0'))
@@ -42,21 +46,28 @@ def demander_nombre(message, min_val=None, max_val=None):
             print("Veuillez entrer un nombre entier valide.")
             continue
         n = to_int(s)
-        if min_val is not None and n < min_val:
-            print(f"Veuillez entrer un nombre entre {min_val} et {max_val if max_val is not None else 'infinie'}.")
+        if (min_val is not None) and (n < min_val):
+            borne_superieure = max_val if max_val is not None else "infini"
+            print(f"Veuillez entrer un nombre entre {min_val} et {borne_superieure}.")
             continue
-        if max_val is not None and n > max_val:
-            print(f"Veuillez entrer un nombre entre {min_val if min_val is not None else '-infinie'} et {max_val}.")
+        if (max_val is not None) and (n > max_val):
+            borne_inferieure = min_val if min_val is not None else "-infini"
+            print(f"Veuillez entrer un nombre entre {borne_inferieure} et {max_val}.")
             continue
         return n
+
 
 def demander_choix(message, options):
     while True:
         print(message)
-        for i, opt in enumerate(options, start=1):
-            print(f"{i}. {opt}")
+        i = 1
+        while i <= len(options):
+            print(f"{i}. {options[i - 1]}")
+            i += 1
+
         choix = demander_nombre("Votre choix : ", 1, len(options))
         return options[choix - 1]
+
 
 def load_fichier(chemin_fichier):
     with open(chemin_fichier, 'r', encoding='utf-8') as f:
