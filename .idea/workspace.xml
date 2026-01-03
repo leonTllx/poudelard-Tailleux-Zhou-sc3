@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32b32260-05b6-46dc-8968-28bb6e51a18c" name="Changes" comment="Rework des fonctions pour avoir que celles autorisés">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;leonTllx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/leonTllx/poudelard-Tailleux-Zhou-sc3.git&quot;,
+    &quot;accountId&quot;: &quot;48f947a3-e2de-4dc4-95e4-7f860bdbb7a1&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="366DTrToj9xsoODzoHr6WZzFx6S" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.chapitre_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chapitre_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chapitre_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.input_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.maison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.personnage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.poudelard.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leont\Desktop\Efrei\poudelard-Tailleux-Zhou-sc3\poudelard" />
+      <recent name="C:\Users\leont\Desktop\Efrei\poudelard-Tailleux-Zhou-sc3\utils" />
+      <recent name="C:\Users\leont\Desktop\Efrei\poudelard-Tailleux-Zhou-sc3\univers" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.142" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32b32260-05b6-46dc-8968-28bb6e51a18c" name="Changes" comment="" />
+      <created>1764318137569</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764318137569</updated>
+      <workItem from="1764318138815" duration="1974000" />
+      <workItem from="1764842584736" duration="733000" />
+      <workItem from="1764853365973" duration="934000" />
+      <workItem from="1764919029443" duration="6556000" />
+      <workItem from="1764925652343" duration="8349000" />
+      <workItem from="1764941481848" duration="290000" />
+      <workItem from="1764941875598" duration="3467000" />
+      <workItem from="1765458290081" duration="228000" />
+      <workItem from="1765458562882" duration="121000" />
+      <workItem from="1765523313479" duration="14232000" />
+      <workItem from="1766127938178" duration="6854000" />
+      <workItem from="1766236765989" duration="60000" />
+      <workItem from="1766236905232" duration="5286000" />
+      <workItem from="1766242583434" duration="3143000" />
+      <workItem from="1766351307171" duration="67000" />
+      <workItem from="1766996566407" duration="797000" />
+      <workItem from="1766997674630" duration="2921000" />
+      <workItem from="1767000638316" duration="1282000" />
+      <workItem from="1767002043702" duration="14715000" />
+      <workItem from="1767226160537" duration="10000" />
+      <workItem from="1767263188563" duration="68000" />
+      <workItem from="1767445596318" duration="6589000" />
+    </task>
+    <task id="LOCAL-00015" summary="test">
+      <option name="closed" value="true" />
+      <created>1764930378879</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764930378879</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test">
+      <option name="closed" value="true" />
+      <created>1764930626981</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764930626981</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test">
+      <option name="closed" value="true" />
+      <created>1764931017472</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764931017472</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test">
+      <option name="closed" value="true" />
+      <created>1764931815241</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764931815241</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test">
+      <option name="closed" value="true" />
+      <created>1764932032818</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1764932032818</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test">
+      <option name="closed" value="true" />
+      <created>1764935129496</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764935129496</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test">
+      <option name="closed" value="true" />
+      <created>1764935186014</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1764935186014</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test">
+      <option name="closed" value="true" />
+      <created>1764935264504</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1764935264504</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test">
+      <option name="closed" value="true" />
+      <created>1764935581868</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1764935581868</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test">
+      <option name="closed" value="true" />
+      <created>1764935990368</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1764935990368</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test">
+      <option name="closed" value="true" />
+      <created>1764936206343</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1764936206343</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test">
+      <option name="closed" value="true" />
+      <created>1764936546743</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1764936546743</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test">
+      <option name="closed" value="true" />
+      <created>1764937779395</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1764937779395</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test">
+      <option name="closed" value="true" />
+      <created>1764942295287</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1764942295287</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test">
+      <option name="closed" value="true" />
+      <created>1764943264183</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1764943264183</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test">
+      <option name="closed" value="true" />
+      <created>1764943732327</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1764943732327</updated>
+    </task>
+    <task id="LOCAL-00031" summary="test">
+      <option name="closed" value="true" />
+      <created>1764944806632</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1764944806632</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765524785034</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1765524785034</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765525189321</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1765525189321</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765526197147</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1765526197147</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765527918476</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1765527918476</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765528011149</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1765528011149</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765532709457</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1765532709457</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765541282764</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1765541282764</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1765541379890</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1765541379890</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1766129706588</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1766129706588</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1766129766004</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1766129766004</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Maj/update program">
+      <option name="closed" value="true" />
+      <created>1766129805001</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1766129805001</updated>
+    </task>
+    <task id="LOCAL-00043" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766130653462</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1766130653462</updated>
+    </task>
+    <task id="LOCAL-00044" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766130974160</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1766130974160</updated>
+    </task>
+    <task id="LOCAL-00045" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766131914535</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1766131914535</updated>
+    </task>
+    <task id="LOCAL-00046" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766133600524</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1766133600524</updated>
+    </task>
+    <task id="LOCAL-00047" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766237901230</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1766237901230</updated>
+    </task>
+    <task id="LOCAL-00048" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766238452723</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1766238452723</updated>
+    </task>
+    <task id="LOCAL-00049" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766238502200</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1766238502200</updated>
+    </task>
+    <task id="LOCAL-00050" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766239850850</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1766239850850</updated>
+    </task>
+    <task id="LOCAL-00051" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766243204117</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1766243204117</updated>
+    </task>
+    <task id="LOCAL-00052" summary="patch note chap 3 + correction chap 2">
+      <option name="closed" value="true" />
+      <created>1766244983102</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1766244983102</updated>
+    </task>
+    <task id="LOCAL-00053" summary="dépôt intermédiaire">
+      <option name="closed" value="true" />
+      <created>1766245134473</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1766245134473</updated>
+    </task>
+    <task id="LOCAL-00054" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1766998514315</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1766998514315</updated>
+    </task>
+    <task id="LOCAL-00055" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1766998862918</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1766998862918</updated>
+    </task>
+    <task id="LOCAL-00056" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1766998932375</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1766998932375</updated>
+    </task>
+    <task id="LOCAL-00057" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1766999061178</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1766999061178</updated>
+    </task>
+    <task id="LOCAL-00058" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1766999161995</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1766999161995</updated>
+    </task>
+    <task id="LOCAL-00059" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1767000314048</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1767000314048</updated>
+    </task>
+    <task id="LOCAL-00060" summary="chapitre 4">
+      <option name="closed" value="true" />
+      <created>1767000464658</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1767000464658</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Overhaul update&#10;petite modifs sur tout les chapitres pour s'adapter au main&#10;correctif des bugs d'affichages dans la console&#10;finalisation du chapitre 4">
+      <option name="closed" value="true" />
+      <created>1767015504610</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1767015504610</updated>
+    </task>
+    <task id="LOCAL-00062" summary="bugs correctifs">
+      <option name="closed" value="true" />
+      <created>1767016648584</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1767016648584</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Rework des fonctions pour avoir que celles autorisés">
+      <option name="closed" value="true" />
+      <created>1767449888293</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1767449888293</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Configuration initiale du projet" />
+    <MESSAGE value="exosquelette projet" />
+    <MESSAGE value="tes" />
+    <MESSAGE value="test" />
+    <MESSAGE value="Maj/update program" />
+    <MESSAGE value="patch note chap 3 + correction chap 2" />
+    <MESSAGE value="dépôt intermédiaire" />
+    <MESSAGE value="chapitre 4" />
+    <MESSAGE value="Overhaul update&#10;petite modifs sur tout les chapitres pour s'adapter au main&#10;correctif des bugs d'affichages dans la console&#10;finalisation du chapitre 4" />
+    <MESSAGE value="bugs correctifs" />
+    <MESSAGE value="Rework des fonctions pour avoir que celles autorisés" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rework des fonctions pour avoir que celles autorisés" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$input_utils.coverage" NAME="input_utils Coverage Results" MODIFIED="1764936435179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/utils" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$test.coverage" NAME="test Coverage Results" MODIFIED="1766130499940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$main.coverage" NAME="poudelard.main Coverage Results" MODIFIED="1767019295028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ProjectFileDir$" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$chapitre_3.coverage" NAME="chapitre_3 Coverage Results" MODIFIED="1766242285199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/chapitres" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$chapitre_2.coverage" NAME="chapitre_2 Coverage Results" MODIFIED="1766242283691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/chapitres" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$chapitre_1.coverage" NAME="chapitre_1 Coverage Results" MODIFIED="1766242281170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/chapitres" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$personnage.coverage" NAME="personnage Coverage Results" MODIFIED="1764925369212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/univers" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$poudelard_main.coverage" NAME="poudelard.main Coverage Results" MODIFIED="1767449645988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ProjectFileDir$" />
+    <SUITE FILE_PATH="coverage/poudelard_Tailleux_Zhou_sc3$maison.coverage" NAME="maison Coverage Results" MODIFIED="1764936450695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/poudelard/univers" />
+  </component>
+</project>
