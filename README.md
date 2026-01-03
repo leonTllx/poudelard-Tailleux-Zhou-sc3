@@ -1,11 +1,11 @@
 # 1. Présentation Générale
 
 ## 🎓 Titre du Projet
-Projet Poudelard – l’art de coder comme un sorcier
+Projet Poudelard
 
 ## 📝 Description brève
-Ce projet consiste en la création d’un **jeu d’aventure textuel en Python**, inspiré de l’univers de Harry Potter.  
-Le joueur crée un personnage, choisit ses attributs, achète ses fournitures, apprend des sortilèges, répond à un quiz magique et participe à un **match de Quidditch**.
+Ce projet consiste en la création d’un jeu d’aventure textuel en Python, inspiré de l’univers de Harry Potter.  
+Le joueur crée un personnage, choisit ses attributs, achète ses fournitures, apprend des sortilèges, répond à un quiz magique et participe à un match de Quidditch.
 
 ## 👥 Contributeurs
 - **Léon TAILLEUX**  
