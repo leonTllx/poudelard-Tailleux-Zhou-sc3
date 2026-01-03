@@ -1,25 +1,25 @@
 # 1. Présentation Générale
 
-## 🎓 Titre du Projet
+##  Titre du Projet
 Projet Poudelard
 
-## 📝 Description brève
+##  Description brève
 Ce projet consiste en la création d’un jeu d’aventure textuel en Python, inspiré de l’univers de Harry Potter.  
 Le joueur crée un personnage, choisit ses attributs, achète ses fournitures, apprend des sortilèges, répond à un quiz magique et participe à un match de Quidditch.
 
-## 👥 Contributeurs
+##  Contributeurs
 - **Léon TAILLEUX**  
 - **Killian ZHOU**
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
-### 📥 Cloner le dépôt Git
+###  Cloner le dépôt Git
 ```bash
 git clone https://github.com/leonTllx/poudelard-Tailleux-Zhou-sc3.git
 ```
-## ▶️ Utilisation
+##  Utilisation
 
 ### Lancement du jeu
 ```bash
@@ -40,7 +40,7 @@ Quiz magique
 Match final de Quidditch
 
 
-## ✨ Fonctionnalités Principales
+##  Fonctionnalités Principales
 
 - Création du personnage (nom, prénom, attributs personnalisés)
 - Gestion complète des saisies utilisateur
@@ -58,7 +58,7 @@ Match final de Quidditch
 
     
 # 2. Journal de Bord
-## 📅 Chronologie du Projet
+##  Chronologie du Projet
 
 Semaine 1 : Mise en place de l’arborescence + input_utils.py + module personnage.py.  
 Semaine 2 : Chapitre 1 (lettre, Hagrid, achats, inventaire).  
@@ -67,7 +67,7 @@ Semaine 4 : Chapitre 3 (sorts → quiz → score des maisons).
 Semaine 5 : Chapitre 4 (Quidditch) + finalisation du jeu.  
 Semaine 6 : Nettoyage du code, tests finaux, rédaction du README, push final.
 
-## 🧾 Répartition des Tâches
+##  Répartition des Tâches
 
 #### Léon TAILLEUX :
 input_utils.py, Chapitre 1, Chapitre 3  
@@ -80,8 +80,8 @@ JSON (inventaire, quiz, sorts, maisons, équipes)
 menu.py, tests d’intégration
 
 # 3. Contrôle, Tests et Validation
-## 🧪 Gestion des entrées et erreurs
-### 🔤 Méthodes utilisées
+##  Gestion des entrées et erreurs
+###  Méthodes utilisées
 
 demander_texte()  
 → validation texte non vide (strip()).  
@@ -90,7 +90,7 @@ demander_nombre()
 demander_choix()  
 → menus numérotés stricts.
 
-### ❗ Gestion des erreurs
+###  Gestion des erreurs
 
 Choix invalide → réaffichage du menu  
 Nombre hors bornes → message explicatif  
@@ -99,14 +99,14 @@ Objets obligatoires absents ou non achetables → fin propre du jeu
 Questions du quiz : comparaison robuste (lower() + strip())  
 Chargement JSON : contrôle de la présence des clés minimales
 
-### 🐞 Bugs connus
+###  Bugs connus
 
 Aucun bug bloquant identifié à ce jour.  
 Si le programme est exécuté trop rapidement, il peut y avoir des des problèmes au niveau des inputs, bien faire attention a jouer lentement au cas ou.
 
 
-## 🧭 Stratégies de Test
-### 🔍 Cas de test spécifiques
+##  Stratégies de Test
+###  Cas de test spécifiques
 
 Tests de toutes les saisies invalides (lettres, vide, hors bornes…)  
 Tests des chemins narratifs : acceptation / refus de la lettre  
